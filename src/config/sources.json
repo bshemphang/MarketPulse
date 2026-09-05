@@ -1,0 +1,70 @@
+{
+  "app": {
+    "name": "Live Market News & Signals Dashboard",
+    "version": "1.0.0",
+    "defaultPollingIntervalMs": 20000
+  },
+  "assetClasses": ["Crypto", "Stocks", "Forex", "Metals"],
+  "sources": {
+    "crypto": {
+      "primaryPrice": {
+        "name": "CoinGecko API",
+        "url": "https://api.coingecko.com/api/v3",
+        "rateLimit": "30 calls/min (Free)",
+        "pollingMs": 25000
+      },
+      "webSocket": {
+        "name": "Binance Public WS",
+        "url": "wss://stream.binance.com:9443/ws",
+        "streaming": true
+      },
+      "news": [
+        { "name": "CryptoPanic", "url": "https://cryptopanic.com/api/v1/posts/?auth_token=free", "type": "api" },
+        { "name": "CoinDesk RSS", "url": "https://www.coindesk.com/arc/outboundfeeds/rss/", "type": "rss" },
+        { "name": "CoinTelegraph RSS", "url": "https://cointelegraph.com/rss", "type": "rss" }
+      ]
+    },
+    "stocks": {
+      "primaryPrice": {
+        "name": "Alpha Vantage / Twelve Data",
+        "rateLimit": "5-8 calls/min (Free)",
+        "pollingMs": 45000
+      },
+      "news": [
+        { "name": "Yahoo Finance RSS", "url": "https://finance.yahoo.com/news/rssindex", "type": "rss" },
+        { "name": "Reuters Business RSS", "url": "https://www.reutersagency.com/feed/?best-topics=business-finance&post_type=best", "type": "rss" }
+      ]
+    },
+    "forex": {
+      "primaryPrice": {
+        "name": "ExchangeRate Host / Twelve Data",
+        "rateLimit": "Free Tier",
+        "pollingMs": 30000
+      },
+      "news": [
+        { "name": "ForexLive RSS", "url": "https://www.forexlive.com/feed/news", "type": "rss" },
+        { "name": "Investing.com Forex", "url": "https://www.investing.com/rss/forex.rss", "type": "rss" }
+      ]
+    },
+    "metals": {
+      "primaryPrice": {
+        "name": "Twelve Data (XAU/USD, XAG/USD)",
+        "rateLimit": "8 calls/min (Free)",
+        "pollingMs": 30000
+      },
+      "backupPrice": {
+        "name": "GoldAPI / Metals-API",
+        "rateLimit": "Fallback"
+      },
+      "news": [
+        { "name": "Kitco Gold RSS", "url": "https://www.kitco.com/rss/news.xml", "type": "rss" },
+        { "name": "Investing.com Commodities RSS", "url": "https://www.investing.com/rss/commodities.rss", "type": "rss" }
+      ]
+    }
+  },
+  "corsProxies": [
+    "https://api.allorigins.win/raw?url=",
+    "https://corsproxy.io/?",
+    "https://api.codetabs.com/v1/proxy?quest="
+  ]
+}

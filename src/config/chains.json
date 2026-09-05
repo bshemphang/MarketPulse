@@ -1,0 +1,75 @@
+[
+  {
+    "id": "base",
+    "name": "Base",
+    "chainId": 8453,
+    "type": "evm",
+    "nativeCurrency": { "name": "Ethereum", "symbol": "ETH", "decimals": 18 },
+    "rpcUrl": "https://mainnet.base.org",
+    "explorerUrl": "https://basescan.org",
+    "isLowFee": true,
+    "avgGasFee": "$0.02",
+    "icon": "🔵"
+  },
+  {
+    "id": "arbitrum",
+    "name": "Arbitrum One",
+    "chainId": 42161,
+    "type": "evm",
+    "nativeCurrency": { "name": "Ethereum", "symbol": "ETH", "decimals": 18 },
+    "rpcUrl": "https://arb1.arbitrum.io/rpc",
+    "explorerUrl": "https://arbiscan.io",
+    "isLowFee": true,
+    "avgGasFee": "$0.05",
+    "icon": "🔷"
+  },
+  {
+    "id": "solana",
+    "name": "Solana",
+    "chainId": 101,
+    "type": "solana",
+    "nativeCurrency": { "name": "Solana", "symbol": "SOL", "decimals": 9 },
+    "rpcUrl": "https://api.mainnet-beta.solana.com",
+    "explorerUrl": "https://solscan.io",
+    "isLowFee": true,
+    "avgGasFee": "$0.001",
+    "icon": "🟣"
+  },
+  {
+    "id": "bsc",
+    "name": "BNB Smart Chain",
+    "chainId": 56,
+    "type": "evm",
+    "nativeCurrency": { "name": "BNB", "symbol": "BNB", "decimals": 18 },
+    "rpcUrl": "https://bsc-dataseed.binance.org",
+    "explorerUrl": "https://bscscan.com",
+    "isLowFee": true,
+    "avgGasFee": "$0.10",
+    "icon": "🟡"
+  },
+  {
+    "id": "polygon",
+    "name": "Polygon PoS",
+    "chainId": 137,
+    "type": "evm",
+    "nativeCurrency": { "name": "MATIC", "symbol": "POL", "decimals": 18 },
+    "rpcUrl": "https://polygon-rpc.com",
+    "explorerUrl": "https://polygonscan.com",
+    "isLowFee": true,
+    "avgGasFee": "$0.03",
+    "icon": "💜"
+  },
+  {
+    "id": "ethereum",
+    "name": "Ethereum Mainnet",
+    "chainId": 1,
+    "type": "evm",
+    "nativeCurrency": { "name": "Ethereum", "symbol": "ETH", "decimals": 18 },
+    "rpcUrl": "https://eth.llamarpc.com",
+    "explorerUrl": "https://etherscan.io",
+    "isLowFee": false,
+    "avgGasFee": "$5.00 - $30.00+",
+    "gasWarning": "High Gas Alert: Swaps on Ethereum Mainnet typically cost $2–$30+. Consider switching to Base, Arbitrum, or Solana for sub-cent gas fees.",
+    "icon": "💎"
+  }
+]
